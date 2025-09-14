@@ -33,7 +33,7 @@
   - _Requirements: 1.1, 10.3_
 
 - [ ] 2. Implement resource management and seed control
-  - [ ] 2.1 Create SeedManager for deterministic experiment seeding
+  - [x] 2.1 Create SeedManager for deterministic experiment seeding
     - Implement deterministic seed generation based on experiment IDs and run numbers
     - Create methods for model initialization, data shuffling, and optimizer-specific seeds
     - Write tests to verify seed consistency across runs and fair comparison enforcement

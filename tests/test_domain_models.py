@@ -46,7 +46,7 @@ class TestExperimentConfig:
         )
 
         with pytest.raises(FrozenInstanceError):
-            config.epochs = 200
+            config.epochs = 200  # type: ignore
 
     def test_empty_experiment_id_validation(self):
         """Test validation fails for empty experiment_id."""
@@ -187,7 +187,7 @@ class TestOptimizerConfig:
         )
 
         with pytest.raises(FrozenInstanceError):
-            config.name = "sgd"
+            config.name = "sgd"  # type: ignore
 
     def test_empty_name_validation(self):
         """Test validation fails for empty name."""
@@ -208,7 +208,7 @@ class TestOptimizerConfig:
         with pytest.raises(ValueError, match="params must be a dictionary"):
             OptimizerConfig(
                 name="adam",
-                params="invalid",
+                params="invalid",  # type: ignore
                 search_space={"learning_rate": (1e-5, 1e-1)},
                 optimization_history=history_df,
             )
@@ -221,7 +221,7 @@ class TestOptimizerConfig:
             OptimizerConfig(
                 name="adam",
                 params={"learning_rate": 0.001},
-                search_space="invalid",
+                search_space="invalid",  # type: ignore
                 optimization_history=history_df,
             )
 
@@ -234,7 +234,7 @@ class TestOptimizerConfig:
                 name="adam",
                 params={"learning_rate": 0.001},
                 search_space={"learning_rate": (1e-5, 1e-1)},
-                optimization_history="invalid",
+                optimization_history="invalid",  # type: ignore
             )
 
     def test_negative_budget_used_validation(self):
@@ -291,7 +291,7 @@ class TestTrainingMetrics:
         )
 
         with pytest.raises(FrozenInstanceError):
-            metrics.run_id = 1
+            metrics.run_id = 1  # type: ignore
 
     def test_empty_experiment_id_validation(self):
         """Test validation fails for empty experiment_id."""

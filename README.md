@@ -9,9 +9,9 @@ nero/
 ├── domain/          # Core business logic and value objects
 ├── orchestration/   # Experiment management and coordination
 ├── analysis/        # Statistical and representation analysis
-└── cli/            # Command-line interface
+└── cli/             # Command-line interface
 
-tests/              # Unit tests
+tests/               # Unit tests
 ```
 
 ## Core Features
@@ -35,18 +35,5 @@ pip install -e .
 pip install -e ".[dev]"
 
 # Run tests
-pytest tests/
-
-# Run with coverage
-pytest tests/ --cov=nero
+pytest
 ```
-
-## Requirements
-
-This project addresses requirements 1.1 and 10.3 from the NERO specification:
-- 1.1: Experiment configuration and execution
-- 10.3: Experimental validity and fair comparison
-
-## License
-
-MIT License

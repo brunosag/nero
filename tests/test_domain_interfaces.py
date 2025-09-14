@@ -21,7 +21,7 @@ class TestAbstractInterfaces:
 
         # Should not be able to instantiate directly
         with pytest.raises(TypeError):
-            Optimizer(None)
+            Optimizer.__new__(Optimizer)
 
     def test_dataset_is_abstract(self):
         """Test that Dataset is an abstract base class."""

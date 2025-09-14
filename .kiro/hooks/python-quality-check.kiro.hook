@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "name": "Python Quality Check",
+  "description": "Automatically runs ruff check --fix, pyright, and ruff format on Python files to fix errors, warnings, and formatting issues",
+  "version": "1",
+  "when": {
+    "type": "userTriggered",
+    "patterns": [
+      "nero/**/*.py",
+      "tests/**/*.py"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Run the following commands in sequence to ensure code quality: 1) `ruff check --fix` to automatically fix linting issues, 2) `pyright` to check for type errors, and 3) `ruff format` to format the code. Fix any remaining errors or warnings that cannot be automatically resolved."
+  }
+}

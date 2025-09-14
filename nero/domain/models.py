@@ -192,10 +192,10 @@ class TrainingMetrics:
             raise ValueError("metrics_log cannot be empty")
 
         # Extract optimizer name from first log entry
-        optimizer_name = metrics_log[0].get("optimizer_name", "unknown")
+        optimizer_name = str(metrics_log[0].get("optimizer_name", "unknown"))
 
         # Extract metrics
-        epochs = [entry["epoch"] for entry in metrics_log]
+        epochs = [int(entry["epoch"]) for entry in metrics_log]
         train_losses = [entry["train_loss"] for entry in metrics_log]
         train_accuracies = [entry["train_accuracy"] for entry in metrics_log]
         test_losses = [entry["test_loss"] for entry in metrics_log]
