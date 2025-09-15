@@ -32,14 +32,14 @@
   - Write unit tests for value object validation and immutability
   - _Requirements: 1.1, 10.3_
 
-- [ ] 2. Implement resource management and seed control
+- [x] 2. Implement resource management and seed control
   - [x] 2.1 Create SeedManager for deterministic experiment seeding
     - Implement deterministic seed generation based on experiment IDs and run numbers
     - Create methods for model initialization, data shuffling, and optimizer-specific seeds
     - Write tests to verify seed consistency across runs and fair comparison enforcement
     - _Requirements: 10.2, 10.3_
 
-  - [ ] 2.2 Implement VRAMManager for dynamic batch size optimization
+  - [x] 2.2 Implement VRAMManager for dynamic batch size optimization
     - Create binary search algorithm for optimal batch size detection
     - Implement memory monitoring and safety margin enforcement
     - Add graceful fallback when VRAM is insufficient with clear error messages

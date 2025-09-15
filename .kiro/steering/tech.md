@@ -28,28 +28,25 @@ pip install -e ".[dev]"
 ### Testing
 ```bash
 # Run tests with coverage
-pytest
+pdm run pytest
 
 # Run specific test file
-pytest tests/test_domain_models.py
+pdm run pytest tests/test_domain_models.py
 
 # Run with verbose output
-pytest -v
+pdm run pytest -v
 ```
 
 ### Code Quality
 ```bash
-# Run linting
-ruff check
-
-# Run code formatting
-ruff format
+# Auto-fix linting issues
+ruff check --fix
 
 # Run type checking
 pyright
 
-# Auto-fix linting issues
-ruff check --fix
+# Run code formatting
+ruff format
 ```
 
 ### Package Management
