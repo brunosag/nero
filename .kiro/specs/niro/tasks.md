@@ -61,7 +61,7 @@
     - Write tests for distribution shift dataset generation
     - _Requirements: 1.1, 11.1, 11.2_
 
-- [ ] 4. Implement neural network models with activation extraction
+- [x] 4. Implement neural network models with activation extraction
   - Create CNNModel class with configurable architecture for MNIST and CIFAR-10
   - Implement get_activations method for layer-wise activation extraction with parameterized layer names
   - Add architecture hashing for fair comparison validation
@@ -69,7 +69,7 @@
   - Write tests for model creation, activation extraction, and architecture consistency
   - _Requirements: 1.1, 4.1, 10.1_
 
-- [ ] 4.5 **VERTICAL SLICE INTEGRATION** - Early end-to-end validation
+- [x] 4.5 **VERTICAL SLICE INTEGRATION** - Early end-to-end validation
   - Create minimal GradientOptimizer with basic Adam implementation for 5 epochs
   - Implement basic ExperimentManager that can execute single optimizer on MNIST
   - Add simple CLI command `run-dummy-experiment` for integration testing
