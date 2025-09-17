@@ -2,7 +2,7 @@
 name = "nero"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = ["pandas>=2.3.2", "torch>=2.8.0"]
+dependencies = ["pandas>=2.3.2", "torch>=2.8.0", "torchvision>=0.23.0"]
 
 [project.scripts]
 nero = "nero.cli.main:main"
@@ -21,6 +21,12 @@ build-backend = "pdm.backend"
 
 [tool.pytest.ini_options]
 addopts = "-ra -q --cov=nero"
+filterwarnings = [
+  "ignore::DeprecationWarning:multiprocessing.popen_fork",
+]
+markers = [
+  "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
 testpaths = ["tests"]
 
 [tool.ruff.lint]
