@@ -46,15 +46,15 @@
     - Write tests for batch size optimization under different memory constraints
     - _Requirements: 9.4, 9.5_
 
-- [ ] 3. Create dataset abstractions and implementations
-  - [ ] 3.1 Implement Dataset abstract base class and MNIST dataset
+- [x] 3. Create dataset abstractions and implementations
+  - [x] 3.1 Implement Dataset abstract base class and MNIST dataset
     - Create Dataset interface with train/test loaders and sample batch methods
     - Implement MNISTDataset with automatic downloading and preprocessing
     - Add data validation and integrity checking with checksums
     - Write tests for dataset loading and sample extraction
     - _Requirements: 1.1, 9.3_
 
-  - [ ] 3.2 Implement CIFAR-10 dataset and distribution shift testing
+  - [x] 3.2 Implement CIFAR-10 dataset and distribution shift testing
     - Create CIFAR10Dataset following same interface pattern
     - Implement texture vs shape bias test datasets for generalization analysis
     - Add adversarially filtered datasets for shortcut learning detection
